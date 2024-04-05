@@ -53,3 +53,18 @@ else
 // 456 => 10
 // 782 => 9
 // 918 => 17
+
+Console.WriteLine("Введите трехзначное число: ");
+int num = Convert.ToInt32(Console.ReadLine());
+
+if ((num >= 100 && num <= 999) || (num >= -999 && num <= -100)) // && - "и", || - "или"(проверка на трехзначность числа (диапазон))
+{
+    int firstDigit = num / 100; // Первое целое число
+    int lastDigit = num % 10; // %10 - остаток от деления на 10(получаем третье число)
+    int sum = firstDigit + lastDigit;
+    Console.WriteLine(sum);
+}
+else
+{
+    Console.WriteLine("Некорректное число!");
+}
